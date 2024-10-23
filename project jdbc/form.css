@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0db8f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 70%; 
+    max-width: 9000px;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    background-color: #002f6c;
+    color: white;
+    padding: 20px;
+    width: 100%; /* Full width for smaller devices */
+    text-align: center;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .sidebar ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1;
+  }
+
+  .sidebar ul li:hover {
+    background-color: #004c99;
+    color: #f4f4f4;
+  }
+
+  .form-container {
+    background-color: #e1e1e1;
+    padding: 20px;
+    display: none; /* Initially hide all forms */
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    font-weight: bold;
+    color: #041670;
+  }
+
+  input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #002f6c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #004c99;
+  }
+
+  /* Show employee form by default */
+  #employee-form {
+    display: block;
+  }
+
+  /* Media Queries for responsiveness */
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+    }
+
+    .sidebar {
+      width: 30%; /* Sidebar will take 30% width on larger screens */
+      text-align: left;
+    }
+
+    .form-container {
+      width: 70%; /* Form containers take 70% width on larger screens */
+      padding: 40px;
+    }
+
+    .sidebar ul {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+      text-align: left;
+     }
+        }
